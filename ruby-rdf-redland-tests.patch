@@ -1,0 +1,8 @@
+diff -ur orig-rdf-redland-0.5.1.3/lib/rdf/redland/node.rb rdf-redland-0.5.1.3/lib/rdf/redland/node.rb
+--- orig-rdf-redland-0.5.1.3/lib/rdf/redland/node.rb	2004-07-18 17:13:05.000000000 -0600
++++ rdf-redland-0.5.1.3/lib/rdf/redland/node.rb	2004-11-01 21:05:23.116766255 -0700
+@@ -1,4 +1,3 @@
+-require 'rdf/redland'
+ require 'rdf/redland/uri'
+ 
+ module Redland
