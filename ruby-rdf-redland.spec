@@ -1,6 +1,3 @@
-%define	ruby_archdir	%(ruby -r rbconfig -e 'print Config::CONFIG["archdir"]')
-%define	ruby_ridir	%(ruby -r rbconfig -e 'include Config; print File.join(CONFIG["datadir"], "ri", CONFIG["ruby_version"], "system")')
-%define ruby_rubylibdir %(ruby -r rbconfig -e 'print Config::CONFIG["rubylibdir"]')
 %define	rname		rdf-redland
 Summary:	RDF/Redland module for Ruby
 Summary(pl):	Modu³ RDF/Redland dla jêzyka Ruby
@@ -14,6 +11,8 @@ Source0:	http://rubyforge.org/frs/download.php/1262/%{rname}-%{version}.tgz
 Source1:	setup.rb
 Patch0:		%{name}-tests.patch
 URL:		http://librdf.org/docs/ruby.html
+BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	ruby
 Requires:	ruby-LOG4R
 Requires:	ruby-redland
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,9 +26,9 @@ Modu³ RDF/Redland dla jêzyka Ruby.
 %prep
 %setup -q -n %{rname}-%{version}
 %patch0 -p1
+cp %{SOURCE1} .
 
 %build
-cp %{SOURCE1} .
 ruby setup.rb config \
 	--siterubyver=%{ruby_rubylibdir} \
 	--sodir=%{ruby_archdir}
