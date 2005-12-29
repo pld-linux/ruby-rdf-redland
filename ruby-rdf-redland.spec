@@ -11,10 +11,11 @@ Source0:	http://rubyforge.org/frs/download.php/1262/%{rname}-%{version}.tgz
 Source1:	setup.rb
 Patch0:		%{name}-tests.patch
 URL:		http://librdf.org/docs/ruby.html
-BuildRequires:	rpmbuild(macros) >= 1.263
+BuildRequires:	rpmbuild(macros) >= 1.277
 BuildRequires:	ruby-modules
 Requires:	ruby-LOG4R
 Requires:	ruby-redland
+%ruby_mod_ver_requires_eq
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
