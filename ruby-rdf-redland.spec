@@ -1,6 +1,6 @@
 %define	rname		rdf-redland
 Summary:	RDF/Redland module for Ruby
-Summary(pl):	Modu³ RDF/Redland dla jêzyka Ruby
+Summary(pl.UTF-8):   ModuÅ‚ RDF/Redland dla jÄ™zyka Ruby
 Name:		ruby-rdf-redland
 Version:	0.5.1.3
 Release:	2
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 RDF/Redland module for Ruby.
 
-%description -l pl
-Modu³ RDF/Redland dla jêzyka Ruby.
+%description -l pl.UTF-8
+ModuÅ‚ RDF/Redland dla jÄ™zyka Ruby.
 
 %prep
 %setup -q -n %{rname}-%{version}
