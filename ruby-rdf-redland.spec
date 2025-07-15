@@ -26,7 +26,7 @@ Moduł RDF/Redland dla języka Ruby.
 
 %prep
 %setup -q -n %{rname}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 cp %{SOURCE1} .
 
 %build
